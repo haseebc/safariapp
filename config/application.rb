@@ -13,12 +13,16 @@ require "action_cable/engine"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Safariapp
   class Application < Rails::Application
+    # added 31032020 by HC
+    config.assets.paths << "#{Rails.root}/app/assets/videos"
     config.generators do |generate|
           generate.assets false
           generate.helper false
