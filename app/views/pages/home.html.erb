@@ -2,9 +2,10 @@
 <p>Tanzania</p>
 
 <div class="safari-video-wrapper">
-  <%= video_tag "elefante.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "safari_video" %>
-  <h1 class="safari"> </h1>
-    <div class="wrapper">
-    <a class="btn btn-flat" href="#">Book now</a>
-    </div>
+ <%= video_tag ["elefante.mp4"], autoplay: :autoplay, loop: :loop, mute: :mute, class: "safari_video" %>
+
+ 
+  
+<div class="wrapper">
+<%= link_to "Book Now", booking_path, class: 'btn btn-flat' %>
 </div>
